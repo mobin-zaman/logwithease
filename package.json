@@ -1,0 +1,26 @@
+{
+  "name": "logwithease",
+  "version": "1.0.0",
+  "description": "the logger client for log with ease",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobin-zaman/logwithease.git"
+  },
+  "keywords": [
+    "log",
+    "logwithease"
+  ],
+  "author": "mobinzamandev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobin-zaman/logwithease/issues"
+  },
+  "homepage": "https://github.com/mobin-zaman/logwithease#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
