@@ -1,23 +1,24 @@
+
 const axios = require('axios');
 const colors = require('colors');
 
 
-const BASE_URL = "http://192.168.0.100:8000/api/logs";
+const BASE_URL = "https://logwithease.servebeer.com/";
 
 
 
-const api_key =  "H0ibelwxcIQ6WE45z74VZrAS4SOZ9wp2YD3qlWUXY2";
+    class Logger {
+        constructor(apiKey) {
+            this.apiKey = apiKey;
+        }
 
-class Logger {
+        log(type,...log) {
 
 
-    static log(type,...log) {
+            const concatLog = log.join(' ');
 
-
-        const concatLog = log.join(' ');
-
-          axios.post(BASE_URL, {
-                api_key,
+            axios.post(BASE_URL, {
+                api_key: this.apiKey,
                 type,
                 description: concatLog
             }).then(response => {
@@ -37,30 +38,30 @@ class Logger {
                     }
 
                 }
-          }).catch(e => {
-              console.log(e);
-              // if(e.response.status === 404) {{
-                  console.log("LOGWITHEASE: error --> please check the api key".bgRed);
-                  console.log(`LOGWITHEASE: error --> also check if you have set LOGWITHEASEKEY=<api_key> as environment variable`.red);
-                  console.log("NOT LOGGED TO LOGWITHEASE: ".red,concatLog);
-              // }}
-          })
+            }).catch(e => {
+                console.log(e);
+                // if(e.response.status === 404) {{
+                console.log("LOGWITHEASE: error --> please check the api key".bgRed);
+                console.log(`LOGWITHEASE: error --> also check if you have set LOGWITHEASEKEY=<api_key> as environment variable`.red);
+                console.log("NOT LOGGED TO LOGWITHEASE: ".red,concatLog);
+                // }}
+            })
         }
 
-    static info(...log) {
-        this.log('INFO', ...log);
+        info(...log) {
+            this.log('INFO', ...log);
+        }
+
+        warn(...log) {
+            this.log('WARN', ...log);
+        }
+
+        error(...log) {
+            this.log('ERROR', ...log);
+        }
+
+
     }
-
-    static warn(...log) {
-        this.log('WARN', ...log);
-    }
-
-    static error(...log) {
-        this.log('ERROR', ...log);
-    }
-
-
-}
-
 
 module.exports = Logger;
+

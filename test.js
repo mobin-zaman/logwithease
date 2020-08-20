@@ -1,4 +1,8 @@
-const logger = require('./index');
+const apiKey =  "H0ibelwxcIQ6WE45z74VZrAS4SOZ9wp2YD3qlWUXY2";
+// const logger = require('./index')(api_key);
+const Logger = require('./index');
+
+const logger = new Logger(apiKey);
 
 const x = 100;
 count = 0;
