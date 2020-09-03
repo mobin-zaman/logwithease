@@ -1,4 +1,4 @@
-#logwithease
+##logwithease
 
 logging made easy 
 
@@ -32,11 +32,15 @@ const exampleException = "Warning: findDOMNode is deprecated in StrictMode. find
     "    in BrowserRouter (at src/index.js:12)\n" +
     "    in StrictMode (at src/index.js:11)";
 
+//info type log
 logger.info("example information");
 
+//warning type log
 logger.warn(`giving you warning: ${count++}`);
 
+//error type log
 logger.error("error: ", exampleException);
 
+//custom type of log, first parameter is the custom log
 logger.log("NOTE", "this is an example of custom type log");
 ```
