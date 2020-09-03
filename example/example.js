@@ -1,14 +1,12 @@
-const apiKey =  "H0ibelwxcIQ6WE45z74VZrAS4SOZ9wp2YD3qlWUXY2";
+//const apiKey =  "H0ibelwxcIQ6WE45z74VZrAS4SOZ9wp2YD3qlWUXY2";
 // const logger = require('./index')(api_key);
-const Logger = require('./index');
+const apiKey = "v4McareBlcds2b-rWABNoy9Xds3p-tUfytlsWU70CVYdnKE5";
+const Logger = require('../index');
 
 const logger = new Logger(apiKey);
 
-const x = 100;
-count = 0;
 
-
-const example_exception = "Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Grid which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://fb.me/react-strict-mode-find-node\n" +
+const exampleException = "Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Grid which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://fb.me/react-strict-mode-find-node\n" +
     "    in div (created by Grid)\n" +
     "    in Grid (created by Table)\n" +
     "    in div (created by Table)\n" +
@@ -23,11 +21,14 @@ const example_exception = "Warning: findDOMNode is deprecated in StrictMode. fin
     "    in BrowserRouter (at src/index.js:12)\n" +
     "    in StrictMode (at src/index.js:11)";
 
-// let timer = setInterval(()=> {
-logger.error("error happeneing in somehwere: ", example_exception);
-
+logger.info("example information");
 
 logger.warn(`giving you warning: ${count++}`);
 
-logger.log("NOTE", `giving you note: ${count++}`);
-// } ,10000);
+logger.error("error: ", exampleException);
+
+logger.log("NOTE", "this is an example of custom type log");
+
+
+
+
