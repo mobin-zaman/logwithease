@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mobin-zaman/logwithease.git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "log",
     "logwithease"
