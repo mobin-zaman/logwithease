@@ -23,7 +23,7 @@ const exampleException = "Warning: findDOMNode is deprecated in StrictMode. find
 
 logger.info("example information");
 
-logger.warn(`giving you warning: ${count++}`);
+logger.warn(`giving you warning`);
 
 logger.error("error: ", exampleException);
 

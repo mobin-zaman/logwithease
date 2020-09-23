@@ -3,7 +3,7 @@ const axios = require('axios');
 const colors = require('colors');
 
 
-const BASE_URL = "https://logwithease.servebeer.com/api/logs";
+const BASE_URL = "https://anotherbrick.duckdns.org/api/logs";
 
 
 
